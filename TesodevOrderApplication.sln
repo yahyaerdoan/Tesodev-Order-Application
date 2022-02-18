@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.WebApiLayer", "TesodevOrder.WebApiLayer\TesodevOrder.WebApiLayer.csproj", "{EA1F73E0-965C-4CF2-B160-688557BF5B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesodevOrder.WebApiLayer", "TesodevOrder.WebApiLayer\TesodevOrder.WebApiLayer.csproj", "{EA1F73E0-965C-4CF2-B160-688557BF5B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.EntityLayer", "TesodevOrder.EntityLayer\TesodevOrder.EntityLayer.csproj", "{A7B0613A-370D-4560-8045-7D23A9334E2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesodevOrder.EntityLayer", "TesodevOrder.EntityLayer\TesodevOrder.EntityLayer.csproj", "{A7B0613A-370D-4560-8045-7D23A9334E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.DataAccessLayer", "TesodevOrder.DataAccessLayer\TesodevOrder.DataAccessLayer.csproj", "{45C602AC-E618-428D-8CFE-ACC18C173715}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesodevOrder.DataAccessLayer", "TesodevOrder.DataAccessLayer\TesodevOrder.DataAccessLayer.csproj", "{45C602AC-E618-428D-8CFE-ACC18C173715}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.BusinessLogicLayer", "TesodevOrder.BusinessLogicLayer\TesodevOrder.BusinessLogicLayer.csproj", "{DF5F46EB-7CBF-43BB-A1A2-E5EDE5ADAD9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesodevOrder.BusinessLogicLayer", "TesodevOrder.BusinessLogicLayer\TesodevOrder.BusinessLogicLayer.csproj", "{DF5F46EB-7CBF-43BB-A1A2-E5EDE5ADAD9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.InterfaceLayer", "TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj", "{8CE9D641-2FA4-4A9A-A814-8D175E4D1904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesodevOrder.InterfaceLayer", "TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj", "{8CE9D641-2FA4-4A9A-A814-8D175E4D1904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesodevOrder.CoreLayer", "TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj", "{CA889EE8-E00D-4EB9-ABCB-F0BBC290B4A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8CE9D641-2FA4-4A9A-A814-8D175E4D1904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CE9D641-2FA4-4A9A-A814-8D175E4D1904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CE9D641-2FA4-4A9A-A814-8D175E4D1904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA889EE8-E00D-4EB9-ABCB-F0BBC290B4A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA889EE8-E00D-4EB9-ABCB-F0BBC290B4A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA889EE8-E00D-4EB9-ABCB-F0BBC290B4A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA889EE8-E00D-4EB9-ABCB-F0BBC290B4A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using TesodevOrder.CoreLayer.Concrete.Entities;
 
 #nullable disable
 
 namespace TesodevOrder.EntityLayer.Concrete.Models
 {
-    public partial class Order
+    public partial class Order : Entity
     {
         public Guid Id { get; set; }
         public Guid CustomerId { get; set; }

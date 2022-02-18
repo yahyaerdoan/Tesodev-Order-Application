@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\IEntities\" />
-    <Folder Include="Abstract\IResponses\" />
-    <Folder Include="Concrete\Entities\" />
+    <Folder Include="Abstract\IResponses\IResult\" />
+    <Folder Include="Abstract\IResponses\IResults\" />
     <Folder Include="Concrete\Responses\Results\" />
     <Folder Include="Concrete\Responses\Result\" />
   </ItemGroup>

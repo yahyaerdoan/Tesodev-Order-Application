@@ -10,4 +10,8 @@
     <Folder Include="Concrete\DtoModelMappers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using TesodevOrder.EntityLayer.Concrete.Models;
 
 #nullable disable
 
-namespace TesodevOrder.DataAccessLayer.GüncelDb
+namespace TesodevOrder.DataAccessLayer.Concrete.Context
 {
     public partial class TesodevOrderApplicationContext : DbContext
     {

@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <Folder Include="Abstract\IEntities\" />
+    <Folder Include="Abstract\IResponses\" />
+    <Folder Include="Concrete\Entities\" />
+    <Folder Include="Concrete\Responses\Results\" />
+    <Folder Include="Concrete\Responses\Result\" />
   </ItemGroup>
 
 </Project>

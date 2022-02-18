@@ -15,7 +15,10 @@
 
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.EntityLayer\TesodevOrder.EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>

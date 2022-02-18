@@ -6,7 +6,8 @@
 
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <Folder Include="Concrete\DtoModels\" />
+    <Folder Include="Concrete\DtoModelMappers\" />
   </ItemGroup>
 
 </Project>

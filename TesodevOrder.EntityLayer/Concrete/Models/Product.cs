@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace TesodevOrder.DataAccessLayer.GüncelDb
+namespace TesodevOrder.EntityLayer.Concrete.Models
 {
     public partial class Product
     {

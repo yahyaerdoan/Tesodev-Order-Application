@@ -14,7 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
+    <Folder Include="Abstract\IRepository\" />
+    <Folder Include="Concrete\EntityFramework\EfRepository\" />
   </ItemGroup>
 
   <ItemGroup>

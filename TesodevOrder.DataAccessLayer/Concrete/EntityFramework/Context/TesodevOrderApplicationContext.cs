@@ -5,7 +5,7 @@ using TesodevOrder.EntityLayer.Concrete.Models;
 
 #nullable disable
 
-namespace TesodevOrder.DataAccessLayer.Concrete.Context
+namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.Context
 {
     public partial class TesodevOrderApplicationContext : DbContext
     {

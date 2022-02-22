@@ -9,7 +9,7 @@ using TesodevOrder.CoreLayer.Concrete.Entities;
 
 namespace TesodevOrder.DataAccessLayer.Abstract.IGenericRepository
 {
-    public interface IGenericRepository<T> where T : IEntity
+    public interface IGenericRepository<T> where T : class, IEntity, new()
     {
         T Add(T entity);
         bool Delete(int id);

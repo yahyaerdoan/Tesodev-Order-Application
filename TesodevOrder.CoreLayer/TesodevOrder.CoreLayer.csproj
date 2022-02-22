@@ -4,11 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstract\IResponses\IResult\" />
-    <Folder Include="Abstract\IResponses\IResults\" />
-    <Folder Include="Concrete\Responses\Results\" />
-    <Folder Include="Concrete\Responses\Result\" />
-  </ItemGroup>
-
 </Project>

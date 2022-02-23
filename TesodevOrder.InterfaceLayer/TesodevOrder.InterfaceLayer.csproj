@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
+    <Folder Include="Abstract\IModelService\" />
     <Folder Include="Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
   </ItemGroup>
 
 </Project>

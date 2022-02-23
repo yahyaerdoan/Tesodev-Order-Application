@@ -6,7 +6,12 @@
 
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <Folder Include="Concrete\BusinessManagers\BusinessLogicManagers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
+    <ProjectReference Include="..\TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj" />
   </ItemGroup>
 
 </Project>

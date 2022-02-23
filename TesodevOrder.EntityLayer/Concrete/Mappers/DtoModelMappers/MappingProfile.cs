@@ -7,7 +7,7 @@ using AutoMapper;
 using TesodevOrder.EntityLayer.Concrete.DtoModels;
 using TesodevOrder.EntityLayer.Concrete.Models;
 
-namespace TesodevOrder.EntityLayer.Concrete.DtoModelMappers
+namespace TesodevOrder.EntityLayer.Concrete.Mappers.DtoModelMappers
 {
     public class MappingProfile : Profile
     {

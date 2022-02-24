@@ -9,7 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\Controller\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
+    <ProjectReference Include="..\TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj" />
   </ItemGroup>
 
 </Project>

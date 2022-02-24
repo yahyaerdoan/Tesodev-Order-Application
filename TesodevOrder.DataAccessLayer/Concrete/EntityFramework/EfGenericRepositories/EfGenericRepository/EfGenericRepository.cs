@@ -9,7 +9,7 @@ using TesodevOrder.CoreLayer.Abstract.IEntities;
 using TesodevOrder.CoreLayer.Concrete.Entities;
 using TesodevOrder.DataAccessLayer.Abstract.IGenericRepository;
 
-namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepository
+namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepositories.EfGenericRepository
 {
     public class EfGenericRepository<T, C> : IGenericRepository<T> where T : class, IEntity, new()
         where C : DbContext, new()

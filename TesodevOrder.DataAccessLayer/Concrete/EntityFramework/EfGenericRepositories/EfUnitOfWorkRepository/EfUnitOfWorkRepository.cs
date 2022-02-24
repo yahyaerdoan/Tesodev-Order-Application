@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Storage;
 using TesodevOrder.CoreLayer.Concrete.Entities;
 using TesodevOrder.DataAccessLayer.Abstract.IGenericRepository;
 using TesodevOrder.DataAccessLayer.Abstract.IUnitOfWorkRepository;
-using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepository;
+using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepositories.EfGenericRepository;
 
-namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfUnitOfWorkRepository
+namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepositories.EfUnitOfWorkRepository
 {
     public class EfUnitOfWorkRepository : IUnitOfWorkRepository
     {

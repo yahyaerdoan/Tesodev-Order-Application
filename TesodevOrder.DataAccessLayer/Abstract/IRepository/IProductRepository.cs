@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TesodevOrder.DataAccessLayer.Abstract.IRepository
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
     }
 }

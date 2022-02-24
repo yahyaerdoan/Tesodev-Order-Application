@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfRepository
 {
-    class EfCustomerRepository
+    public class EfCustomerRepository
     {
     }
 }

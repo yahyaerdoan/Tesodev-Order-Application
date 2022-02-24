@@ -12,5 +12,8 @@ namespace TesodevOrder.BusinessLogicLayer.Concrete.BusinessManagers.BusinessLogi
 {
     public class OrderManager : GenericBusinessLogicManager<Order, DtoOrder>, IOrderService
     {
+        public OrderManager(IServiceProvider service) : base(service)
+        {
+        }
     }
 }

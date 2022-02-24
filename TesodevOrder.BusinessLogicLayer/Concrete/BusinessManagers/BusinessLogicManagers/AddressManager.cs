@@ -12,5 +12,8 @@ namespace TesodevOrder.BusinessLogicLayer.Concrete.BusinessManagers.BusinessLogi
 {
     public class AddressManager : GenericBusinessLogicManager<Address, DtoAddress>, IAddressService
     {
+        public AddressManager(IServiceProvider service) : base(service)
+        {
+        }
     }
 }

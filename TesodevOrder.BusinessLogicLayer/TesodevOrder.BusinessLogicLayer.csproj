@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
+    <ProjectReference Include="..\TesodevOrder.DataAccessLayer\TesodevOrder.DataAccessLayer.csproj" />
     <ProjectReference Include="..\TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj" />
   </ItemGroup>
 

@@ -4,14 +4,28 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using TesodevOrder.CoreLayer.Abstract.IResponses.IResults;
 using TesodevOrder.CoreLayer.Concrete.Entities;
+using TesodevOrder.DataAccessLayer.Abstract.IGenericRepository;
+using TesodevOrder.DataAccessLayer.Abstract.IUnitOfWorkRepository;
+using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.Context;
 using TesodevOrder.InterfaceLayer.Abstract.IGenericService;
 
 namespace TesodevOrder.BusinesLogicLayer.Concrete.BusinessManagers.GenericBusinessLogics
 {
-    public class GenericBusinessLogicManager<T, TDto> : IGenericService<T, TDto> where T : Entity where TDto : Dto
+    public class GenericBusinessLogicManager<T, TDto> : IGenericService<T, TDto> where T : Entity, new() where TDto : Dto
     {
+        private readonly IUnitOfWorkRepository unitOfWork;
+        private readonly IServiceProvider service;
+        protected readonly IGenericRepository<T> repository;
+
+        public GenericBusinessLogicManager(IServiceProvider service)
+        {
+            unitOfWork = service.GetService<IUnitOfWorkRepository>();
+            repository = unitOfWork.GetRepository<T,TesodevOrderApplicationContext>();
+            this.service = service;
+        }
         public IDataResult<TDto> Add(TDto entity, bool saveChanges = true)
         {
             throw new NotImplementedException();

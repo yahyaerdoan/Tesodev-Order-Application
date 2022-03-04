@@ -13,8 +13,10 @@ namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfRepository
 {
     public class EfOrderRepository : EfGenericRepository<Order, TesodevOrderApplicationContext>, IOrderRepository
     {
-        public EfOrderRepository(DbContext context) : base(context)
+        private readonly IOrderRepository _orderRepository;
+        public EfOrderRepository(DbContext context, IOrderRepository orderRepository) : base(context)
         {
+            _orderRepository = orderRepository;
         }
     }
 }

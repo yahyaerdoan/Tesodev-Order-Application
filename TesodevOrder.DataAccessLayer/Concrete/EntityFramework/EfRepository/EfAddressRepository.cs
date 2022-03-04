@@ -14,8 +14,10 @@ namespace TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfRepository
 {
     public class EfAddressRepository : EfGenericRepository<Address, TesodevOrderApplicationContext>, IAddressRepository
     {
-        public EfAddressRepository(DbContext context) : base(context)
+        private readonly IAddressRepository _addressRepository;
+        public EfAddressRepository(DbContext context, IAddressRepository addressRepository) : base(context)
         {
+            _addressRepository = addressRepository;
         }
     }
 }

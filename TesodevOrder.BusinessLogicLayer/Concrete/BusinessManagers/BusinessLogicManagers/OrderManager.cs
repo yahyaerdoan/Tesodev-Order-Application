@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TesodevOrder.BusinesLogicLayer.Concrete.BusinessManagers.GenericBusinessLogics;
+using TesodevOrder.DataAccessLayer.Abstract.IRepository;
 using TesodevOrder.EntityLayer.Concrete.DtoModels;
 using TesodevOrder.EntityLayer.Concrete.Models;
 using TesodevOrder.InterfaceLayer.Abstract.IModelService;
@@ -12,10 +13,10 @@ namespace TesodevOrder.BusinessLogicLayer.Concrete.BusinessManagers.BusinessLogi
 {
     public class OrderManager : GenericBusinessLogicManager<Order, DtoOrder>, IOrderService
     {
-        private readonly IOrderService _orderService;
-        public OrderManager(IServiceProvider service, IOrderService orderService) : base(service)
+        private readonly IOrderRepository _orderRepository ;
+        public OrderManager(IServiceProvider service, IOrderRepository orderRepository) : base(service)
         {
-            _orderService = orderService;
+            _orderRepository = orderRepository;
         }
     }
 }

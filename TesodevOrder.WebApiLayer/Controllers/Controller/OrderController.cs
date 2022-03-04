@@ -15,8 +15,10 @@ namespace TesodevOrder.WebApiLayer.Controllers.Controller
     [ApiController]
     public class OrderController : GenericController<IOrderService, Order, DtoOrder>
     {
-        public OrderController(IOrderService service) : base(service)
+        private readonly IOrderService _orderService;
+        public OrderController(IOrderService service, IOrderService orderService) : base(service)
         {
+            _orderService = orderService;
         }
     }
 }

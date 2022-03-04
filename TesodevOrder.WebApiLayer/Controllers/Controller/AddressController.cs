@@ -15,8 +15,10 @@ namespace TesodevOrder.WebApiLayer.Controllers.Controller
     [ApiController]
     public class AddressController : GenericController<IAddressService, Address, DtoAddress>
     {
-        public AddressController(IAddressService service) : base(service)
+        private readonly IAddressService _addressService;
+        public AddressController(IAddressService service, IAddressService addressService) : base(service)
         {
+            _addressService = addressService;
         }
     }
 }

@@ -15,8 +15,10 @@ namespace TesodevOrder.WebApiLayer.Controllers.Controller
     [ApiController]
     public class ProductController : GenericController<IProductService, Product, DtoProduct>
     {
-        public ProductController(IProductService service) : base(service)
+        private readonly IProductService _productService;
+        public ProductController(IProductService service, IProductService productService) : base(service)
         {
+            _productService = productService;
         }
     }
 }

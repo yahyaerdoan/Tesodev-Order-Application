@@ -15,8 +15,10 @@ namespace TesodevOrder.WebApiLayer.Controllers.Controller
     [ApiController]
     public class CustomerController : GenericController<ICustomerService, Customer, DtoCustomer>
     {
-        public CustomerController(ICustomerService service) : base(service)
+        private readonly ICustomerService _customerService;
+        public CustomerController(ICustomerService service, ICustomerService customerService) : base(service)
         {
+            _customerService = customerService;
         }
     }
 }

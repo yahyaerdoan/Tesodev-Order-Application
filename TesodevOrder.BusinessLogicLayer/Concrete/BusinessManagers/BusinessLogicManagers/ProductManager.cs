@@ -12,8 +12,10 @@ namespace TesodevOrder.BusinessLogicLayer.Concrete.BusinessManagers.BusinessLogi
 {
     public class ProductManager : GenericBusinessLogicManager<Product, DtoProduct>, IProductService
     {
-        public ProductManager(IServiceProvider service) : base(service)
+        private readonly IProductService _productService;
+        public ProductManager(IServiceProvider service, IProductService productService) : base(service)
         {
+            _productService = productService;
         }
     }
 }

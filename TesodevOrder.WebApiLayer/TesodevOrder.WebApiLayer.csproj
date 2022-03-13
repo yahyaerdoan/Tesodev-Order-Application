@@ -9,7 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TesodevOrder.BusinessLogicLayer\TesodevOrder.BusinessLogicLayer.csproj" />
     <ProjectReference Include="..\TesodevOrder.CoreLayer\TesodevOrder.CoreLayer.csproj" />
+    <ProjectReference Include="..\TesodevOrder.DataAccessLayer\TesodevOrder.DataAccessLayer.csproj" />
     <ProjectReference Include="..\TesodevOrder.InterfaceLayer\TesodevOrder.InterfaceLayer.csproj" />
   </ItemGroup>
 

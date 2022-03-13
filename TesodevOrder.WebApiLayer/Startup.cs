@@ -11,6 +11,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using TesodevOrder.BusinessLogicLayer.Concrete.BusinessManagers.BusinessLogicManagers;
+using TesodevOrder.DataAccessLayer.Abstract.IRepository;
+using TesodevOrder.DataAccessLayer.Abstract.IUnitOfWorkRepository;
+using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.Context;
+using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfGenericRepositories.EfUnitOfWorkRepository;
+using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.EfRepository;
+using TesodevOrder.InterfaceLayer.Abstract.IModelService;
 
 namespace TesodevOrder.WebApiLayer
 {
@@ -26,6 +34,27 @@ namespace TesodevOrder.WebApiLayer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region DbContext
+            services.AddScoped<DbContext, TesodevOrderApplicationContext>();
+            #endregion
+
+            #region ServiceSection
+            services.AddScoped<IAddressService, AddressManager>();
+            services.AddScoped<ICustomerService, CustomerManager>();
+            services.AddScoped<IOrderService, OrderManager>();
+            services.AddScoped<IProductService, ProductManager>();
+            #endregion
+
+            #region RepositorySection
+            services.AddScoped<IAddressRepository, EfAddressRepository>();
+            services.AddScoped<ICustomerRepository, EfCustomerRepository>();
+            services.AddScoped<IOrderRepository, EfOrderRepository>();
+            services.AddScoped<IProductRepository, EfProductRepository>();
+            #endregion
+
+            #region UnitOfWork
+            services.AddScoped<IUnitOfWorkRepository, EfUnitOfWorkRepository>();
+            #endregion
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

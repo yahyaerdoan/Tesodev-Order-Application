@@ -18,5 +18,17 @@ namespace TesodevOrder.WebApiLayer.Controllers.GenericController.cs
         {
             _service = service;
         }
+
+        [HttpPost("Add")]
+        public IActionResult Add(TDto dto)
+        {
+            var result = _service.Add(dto);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

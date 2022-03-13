@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using TesodevOrder.CoreLayer.Abstract.IResponses.IResults;
 using TesodevOrder.CoreLayer.Concrete.Entities;
+using TesodevOrder.CoreLayer.Concrete.MapperConfiguration;
+using TesodevOrder.CoreLayer.Concrete.Responses.Results;
 using TesodevOrder.DataAccessLayer.Abstract.IGenericRepository;
 using TesodevOrder.DataAccessLayer.Abstract.IUnitOfWorkRepository;
 using TesodevOrder.DataAccessLayer.Concrete.EntityFramework.Context;
@@ -23,12 +25,25 @@ namespace TesodevOrder.BusinesLogicLayer.Concrete.BusinessManagers.GenericBusine
         public GenericBusinessLogicManager(IServiceProvider service)
         {
             unitOfWork = service.GetService<IUnitOfWorkRepository>();
-            repository = unitOfWork.GetRepository<T,TesodevOrderApplicationContext>();
+            repository = unitOfWork.GetRepository<T, TesodevOrderApplicationContext>();
             this.service = service;
         }
         public IDataResult<TDto> Add(TDto entity, bool saveChanges = true)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var tresult = repository.Add(ObjectMapperConfiguration.Mapper.Map<T>(entity));
+                if (saveChanges)
+                {
+                    Save();
+                }
+
+                return new SuccessDataResult<TDto>(ObjectMapperConfiguration.Mapper.Map<T, TDto>(tresult), "Eklendi.");
+            }
+            catch (Exception)
+            {
+                return new ErrorDataResult<TDto>(null, "Ekleme işlemi hatalı!");
+            }
         }
 
         public Task<IDataResult<TDto>> AddAsync(TDto entity, bool saveChanges = true)
@@ -88,7 +103,7 @@ namespace TesodevOrder.BusinesLogicLayer.Concrete.BusinessManagers.GenericBusine
 
         public void Save()
         {
-            throw new NotImplementedException();
+            unitOfWork.SaveChanges();
         }
     }
 }
